@@ -1,0 +1,6 @@
+E:\Visual_proj\serial_init\serial_init\bin\Release\serial_init.exe
+E:\Visual_proj\serial_init\serial_init\bin\Release\serial_init.pdb
+E:\Visual_proj\serial_init\serial_init\obj\Release\serial_init.csprojResolveAssemblyReference.cache
+E:\Visual_proj\serial_init\serial_init\obj\Release\serial_init.csproj.CoreCompileInputs.cache
+E:\Visual_proj\serial_init\serial_init\obj\Release\serial_init.exe
+E:\Visual_proj\serial_init\serial_init\obj\Release\serial_init.pdb
