@@ -1,21 +1,18 @@
 ﻿using System;
 using System.IO.Ports;
 
-namespace serial_init
+class Program
 {
-    class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
+        try
         {
-            try
+            using (SerialPort serialPort = new SerialPort(args[0], Convert.ToInt32(args[1])))
             {
-                using (SerialPort serialPort = new SerialPort(args[0], Convert.ToInt32(args[1])))
-                {
-                    serialPort.Open();
-                    serialPort.Close();
-                }
+                serialPort.Open();
+                serialPort.Close();
             }
-            catch { }
         }
+        catch { }
     }
 }
