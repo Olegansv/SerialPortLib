@@ -5,13 +5,11 @@ class SerialPort:
     __port = None
     __baudRate = None
     __serial = None
-    __logging = True
     __isOpened = False
     
-    def __init__(self, port = None, baudRate = None, logging = True):
+    def __init__(self, port = None, baudRate = None, logging = False):
         self.__port = port
         self.__baudRate = baudRate
-        self.__logging = logging
     
     def init(self):
         call(["serial_init.exe", str(self.__port), str(self.__baudRate)])
@@ -22,8 +20,6 @@ class SerialPort:
         else:
             self.__serial = os.open(self.__port, os.O_RDWR)
             self.__isOpened = True
-            if self.__logging:
-                print("Port %s opened" % (self.__port))
     
     def setPort(self, port):
         if not self.__isOpened:
@@ -39,3 +35,18 @@ class SerialPort:
     def send(self, text):
         if self.__isOpened:
             os.write(self.__serial, text)
+            
+def getPortNames(lim = 10):
+    ports = []
+    for i in range(1, lim + 1):
+        try:
+            __port = os.open("COM%s" % (i), os.O_RDWR)
+            os.close(__port)
+        except OSError as e:
+            if e.errno == 13: # PermissionError
+                ports.append({"COM%s" % (i): "busy"})
+        except:
+            continue
+        else:
+            ports.append({"COM%s" % (i): "available"})
+    return ports
