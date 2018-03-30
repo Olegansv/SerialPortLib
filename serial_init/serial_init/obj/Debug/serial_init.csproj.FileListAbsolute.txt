@@ -1,6 +1,0 @@
-E:\Visual_proj\serial_init\serial_init\bin\Debug\serial_init.exe
-E:\Visual_proj\serial_init\serial_init\bin\Debug\serial_init.pdb
-E:\Visual_proj\serial_init\serial_init\obj\Debug\serial_init.csprojResolveAssemblyReference.cache
-E:\Visual_proj\serial_init\serial_init\obj\Debug\serial_init.csproj.CoreCompileInputs.cache
-E:\Visual_proj\serial_init\serial_init\obj\Debug\serial_init.exe
-E:\Visual_proj\serial_init\serial_init\obj\Debug\serial_init.pdb
